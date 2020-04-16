@@ -28,5 +28,4 @@ QgsProject.instance().addMapLayer(layer_corona)
 
 #Setando o encoding UTF-8 para a tabela no QGIS
 layer_corona.setProviderEncoding(u'UTF-8')
-layer_corona.dataProvider().setEncoding(u'UTF-8')
 
