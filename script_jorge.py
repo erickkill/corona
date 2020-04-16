@@ -4,7 +4,7 @@ import numpy as np
 #Abrindo o dataset
 corona = pd.read_excel("diretório local com o .xlsx")
 
-#Fixando a coluna "Municipio" como index e convertendo as linhas em coluna, utilizando a função pivot
+#Fixando a coluna "Municipio" como index e convertendo as linhas em colunas, utilizando a função pivot
 df = corona.pivot(index='Municipio', columns='Status', values='Total')
 
 #Substituindo valores NaN por 0
