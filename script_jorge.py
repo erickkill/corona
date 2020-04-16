@@ -20,7 +20,7 @@ df.reset_index(level=0, inplace=True)
 df.rename_axis(None, inplace=True)
 
 #Exportando para excel
-df.to_csv(f'diretório local apontando o .csv',index=False, encoding='utf-8-sig')
+df.to_csv(f'diretório local apontando o salvamento do .csv',index=False, encoding='utf-8-sig')
 
 #Adicionando como layer no QGIS
 layer_corona = QgsVectorLayer('diretório local com o .csv gerado', 'Corona', 'ogr')
