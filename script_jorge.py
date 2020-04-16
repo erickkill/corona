@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 
 #abrindo o dataset
-corona = pd.read_excel("C:/Users/erick/Desktop/jorge/CORONA_PUNK.xlsx")
+corona = pd.read_excel("diretório local com o .xlsx")
 
 #fixando a coluna "Municipio" como index e convertendo as linhas em coluna, utilizando a função pivot
 df = corona.pivot(index='Municipio', columns='Status', values='Total')
@@ -25,8 +25,8 @@ df.rename_axis(None, inplace=True)
 df.to_csv(f'C:/Users/erick/Desktop/jorge/teste.csv',index=False, encoding='utf-8-sig')
 
 #adicionando layer
-uri = QgsVectorLayer('C:/Users/erick/Desktop/jorge/teste.csv', 'Corona', 'ogr')
-QgsProject.instance().addMapLayer(uri)
+layer_corona = QgsVectorLayer('diretório local com o .csv gerado', 'Corona', 'ogr')
+QgsProject.instance().addMapLayer(layer_corona)
 
 #setando o encoding UTF-8
 uri.setProviderEncoding(u'UTF-8')
