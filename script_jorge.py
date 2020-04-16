@@ -10,7 +10,6 @@ df = corona.pivot(index='Municipio', columns='Status', values='Total')
 #Substituindo valores NaN por 0
 cols = ['Diagnosticados', 'Mortes', 'Suspeita']
 df[cols] = df[cols].replace(['nan', 0], np.nan)
-df[cols] = df[cols].fillna(0)
 
 #Transformando para tipo inteiro
 df[list(cols)] = df[list(cols)].fillna(0.0).astype(int)
