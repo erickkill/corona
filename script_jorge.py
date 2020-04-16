@@ -17,7 +17,7 @@ df[list(cols)] = df[list(cols)].fillna(0.0).astype(int)
 #Resetando o índice município, para que se torne coluna
 df.reset_index(level=0, inplace=True)
 
-#Exportando para excel
+#Exportando para .csv
 df.to_csv(f'diretório local apontando o salvamento do .csv',index=False, encoding='utf-8-sig')
 
 #Adicionando como layer no QGIS
